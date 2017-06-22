@@ -20,53 +20,53 @@
 def stringReformatting(s, k)
 
   # create a string to be returned
-  returned_string = ""
+  returnedString = ""
 
   # take the string s, remove the '-' by split("-"), then join the arrays returned from split()
   # into 1 string and then convert that string to an array of characters
-  char_array = s.split("-").join("").chars()
+  charArray = s.split("-").join("").chars()
 
-  # char_array will be changed, break out when there is no more characters left
-  while char_array.length != 0
+  # charArray will be changed, break out when there is no more characters left
+  while charArray.length != 0
 
     # if the number of chars isn't divisible by k
     # the remainder tells you how much letters to remove from the 
-    # char_array so that the next iteration will result in the number
+    # charArray so that the next iteration will result in the number
     # of chars being divisible by 0
-    if char_array.length % k != 0
+    if charArray.length % k != 0
 
-      # num_of_chars = the number of characters to remove from the array
-      num_of_chars = char_array.length % k
+      # numOfChars = the number of characters to remove from the array
+      numOfChars = charArray.length % k
 
       #add that to the returned string, by converting the subarray to a string
       # and appending a "-"
-      returned_string = char_array[0, num_of_chars].join("") + "-"
+      returnedString = charArray[0, numOfChars].join("") + "-"
 
-      # update the char_array to only contain the characters that were NOT added to the string
-      # this is done by slicing and replacing the char_array
-      char_array = char_array[num_of_chars, char_array.length - 1]
+      # update the charArray to only contain the characters that were NOT added to the string
+      # this is done by slicing and replacing the charArray
+      charArray = charArray[numOfChars, charArray.length - 1]
 
     # now the num of chars in the array is divisible by k
     else
 
-      # if the length of the char_array equals k, this is the last iteration and therefor 
+      # if the length of the charArray equals k, this is the last iteration and therefor 
       # won't need to append the "-"
-      if char_array.length == k
-        returned_string += char_array[0, k].join("")
+      if charArray.length == k
+        returnedString += charArray[0, k].join("")
       else
 
         # continue to add the next k sub-elements from the array to the returned string
         # and append the "-" 
-        returned_string = returned_string + char_array[0, k].join("") + "-"
+        returnedString = returnedString + charArray[0, k].join("") + "-"
       end 
 
-      # update the char_array by removing the characters added to the returned string
-      char_array = char_array[k, char_array.length - 1]
+      # update the charArray by removing the characters added to the returned string
+      charArray = charArray[k, charArray.length - 1]
     end
 
   end
 
-  return returned_string
+  return returnedString
 
 end
 
