@@ -40,12 +40,12 @@ end
 
 # examples of testing the function
 
-array1 = [1, 2, 5, 8, 12, 5];
-array2 = [9, 3, 1, 6];
+array1 = [1, 2, 5, 8, 12, 5]
+array2 = [9, 3, 1, 6]
 
-puts sumOfTwo(array1, array2, 10);
-puts sumOfTwo(array1, array2, 5);
-puts sumOfTwo(array1, array2, 20);
-puts sumOfTwo(array1, array2, 0);
+puts sumOfTwo(array1, array2, 10)
+puts sumOfTwo(array1, array2, 5)
+puts sumOfTwo(array1, array2, 20)
+puts sumOfTwo(array1, array2, 0)
 
 
