@@ -35,16 +35,16 @@ def stringReformatting(s, k)
     # of chars being divisible by 0
     if charArray.length % k != 0
 
-      # numOfChars = the number of characters to remove from the array
-      numOfChars = charArray.length % k
+      # numOfchars = the number of characters to remove from the array
+      numOfchars = charArray.length % k
 
       #add that to the returned string, by converting the subarray to a string
       # and appending a "-"
-      returnedString = charArray[0, numOfChars].join("") + "-"
+      returnedString = charArray[0, numOfchars].join("") + "-"
 
       # update the charArray to only contain the characters that were NOT added to the string
       # this is done by slicing and replacing the charArray
-      charArray = charArray[numOfChars, charArray.length - 1]
+      charArray = charArray[numOfchars, charArray.length - 1]
 
     # now the num of chars in the array is divisible by k
     else
@@ -53,8 +53,8 @@ def stringReformatting(s, k)
       # won't need to append the "-"
       if charArray.length == k
         returnedString += charArray[0, k].join("")
+        
       else
-
         # continue to add the next k sub-elements from the array to the returned string
         # and append the "-" 
         returnedString = returnedString + charArray[0, k].join("") + "-"
